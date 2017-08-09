@@ -33,12 +33,12 @@ describe CAUMA_KEY    <colocar key informado pelo CERT.Bahia>
 ## Ativação no Zimbra
 
 ```
-wget https://raw.githubusercontent.com/UniversidadeFederalDoRioGrandeFURG/spamassassin-cauma/master/cauma.pm -O /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pl
+wget https://raw.githubusercontent.com/UniversidadeFederalDoRioGrandeFURG/spamassassin-cauma/master/cauma.pm -O /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pm
 ```
 
 Editar /opt/zimbra/data/spamassassin/v310.pre
 ```
-loadplugin CaUMa /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pl
+loadplugin CaUMa /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pm
 ```
 
 Criar o arquivo configuração da regra
