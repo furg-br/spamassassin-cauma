@@ -54,7 +54,7 @@ package CaUMa;
 			to_json($data),
 			{'Accept' => 'application/json', 'Content-Type' => 'application/json'}
 		);
-		if( $client->responseCode() != '200' ){
+		if($client->responseCode() != '200'){
 			Mail::SpamAssassin::Plugin::info("Problema de comunicações com CaUMa");
 			return 0;
 		}
