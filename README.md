@@ -36,7 +36,7 @@ describe CAUMA_KEY    <colocar key informado pelo CERT.Bahia>
 wget https://raw.githubusercontent.com/UniversidadeFederalDoRioGrandeFURG/spamassassin-cauma/master/cauma.pm -O /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pm
 ```
 
-Editar /opt/zimbra/data/spamassassin/v310.pre
+Editar /opt/zimbra/data/spamassassin/localrules/v310.pre
 ```
 loadplugin CaUMa /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pm
 ```
