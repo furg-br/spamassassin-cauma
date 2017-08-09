@@ -41,12 +41,14 @@ Editar /opt/zimbra/data/spamassassin/v310.pre
 loadplugin CaUMa /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pm
 ```
 
-Editar /opt/zimbra/data/spamassassin/localrules/local.cf
 ```
+cat <<EOF > /opt/zimbra/data/spamassassin/localrules/cauma.cf
 body CHECK_CAUMA eval:check_cauma()
 score CHECK_CAUMA 10
 describe CHECK_CAUMA  Existem URL maliciosas em seu e-mail
 
 describe CAUMA_LOGIN  <colocar login informado pelo CERT.Bahia>
 describe CAUMA_KEY    <colocar key informado pelo CERT.Bahia>
+EOF
+chown zimbra:zimbra /opt/zimbra/data/spamassassin/localrules/cauma.cf
 ```
