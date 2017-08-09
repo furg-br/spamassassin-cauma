@@ -43,7 +43,7 @@ loadplugin CaUMa /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pm
 
 Criar o arquivo configuração da regra
 ```
-cat <<EOF > /opt/zimbra/data/spamassassin/cauma.cf
+cat <<EOF > /opt/zimbra/data/spamassassin/localrules/cauma.cf
 body CHECK_CAUMA eval:check_cauma()
 score CHECK_CAUMA 10
 describe CHECK_CAUMA  Existem URL maliciosas em seu e-mail
