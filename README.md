@@ -17,7 +17,7 @@ cpan JSON
 
 ## Ativação da regra no SpamAssassin
 
-Editar de regras do SpamAssassin e incluir a regras
+Editar o arquivo de regras do SpamAssassin e incluir
 
 ```
 loadplugin CaUMa /<path do script>/cauma.pm
