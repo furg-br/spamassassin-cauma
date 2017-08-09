@@ -26,8 +26,8 @@ body CHECK_CAUMA eval:check_cauma()
 score CHECK_CAUMA 10
 describe CHECK_CAUMA  Existem URL maliciosas em seu e-mail
 
-describe CAUMA_LOGIN  *colocar login informado pelo CERT.Bahia*
-describe CAUMA_KEY    *colocar key informado pelo CERT.Bahia*
+describe CAUMA_LOGIN  _colocar login informado pelo CERT.Bahia_
+describe CAUMA_KEY    _colocar key informado pelo CERT.Bahia_
 ```
 
 ## Ativação no Zimbra
@@ -36,18 +36,19 @@ describe CAUMA_KEY    *colocar key informado pelo CERT.Bahia*
 wget https://raw.githubusercontent.com/UniversidadeFederalDoRioGrandeFURG/spamassassin-cauma/master/cauma.pm -O /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pl
 ```
 
-# editar /opt/zimbra/data/spamassassin/v310.pre
+Editar /opt/zimbra/data/spamassassin/v310.pre
 ```
 loadplugin CaUMa /opt/zimbra/common/lib/perl5/Mail/SpamAssassin/Cauma.pl
 ```
 
+Criar o arquivo configuração da regra
 ```
 cat <<EOF > /opt/zimbra/data/spamassassin/cauma.cf
 body CHECK_CAUMA eval:check_cauma()
 score CHECK_CAUMA 10
 describe CHECK_CAUMA  Existem URL maliciosas em seu e-mail
 
-describe CAUMA_LOGIN  *colocar login informado pelo CERT.Bahia*
-describe CAUMA_KEY    *colocar key informado pelo CERT.Bahia*
+describe CAUMA_LOGIN  _colocar login informado pelo CERT.Bahia_
+describe CAUMA_KEY    _colocar key informado pelo CERT.Bahia_
 EOF
 ```
